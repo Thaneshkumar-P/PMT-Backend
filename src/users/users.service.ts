@@ -146,7 +146,7 @@ export class UsersService {
             <p>Hello ${newUser.fullName},</p>
             <p>Thank you for joining our platform! To get started, please set your password by clicking the button below:</p>
             <div class="button">
-              <a href="http://localhost:3000/reset/${newUser.resetToken}" target="_blank">Set Your Password</a>
+              <a href="${process.env.origin}/reset/${newUser.resetToken}" target="_blank">Set Your Password</a>
             </div>
             <p>If the button above doesn't work, please copy and paste the following link into your web browser:</p>
             <p>${process.env.origin}/reset/${newUser.resetToken}</p>

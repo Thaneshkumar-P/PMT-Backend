@@ -38,8 +38,6 @@ export class TeamsService {
 
     const removed = oldTeam.users.filter( user => !team.users.includes(user))
 
-    console.log(removed)
-
     await this.usersService.findAndUpdateTeams(users, team.id, removed)
 
     return team
@@ -87,4 +85,5 @@ export class TeamsService {
     const teams = await this.teamModel.find({}).exec()
     return teams
   }
+
 }
